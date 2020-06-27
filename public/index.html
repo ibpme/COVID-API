@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 API</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+</style>
+
+<body>
+    <div class="title"  >
+        <h1 >COVID-19 API</h1>
+    </div>
+    <form onsubmit="getCountryData('Indonesia')" autocomplete="off" class="search-box">
+        <input name="country" class="search-text" id="country-field" type="text" placeholder="Find by Country">
+        <button type="submit" class="searchbutton" >
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <div class="cases">
+        <h2 id="county-name" style="color:aliceblue">Worldwide</h2>
+        <h2 style="color: goldenrod;">Confirmed Cases</h2>
+        <p id='confirmed-value'>0</p>
+        <h2 style="color:forestgreen;">Recovered Cases</h2>
+        <p id='recovered-value'>0</p>
+        <h2 style="color:crimson;">Deaths</h2>
+        <p id='deaths-value'>0</p>
+    </div>
+</body>
+
+<script type="text/javascript" src="./getData.js"></script>
+
+
+</html>
