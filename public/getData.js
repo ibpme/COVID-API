@@ -1,6 +1,6 @@
 const url = "https://covid19.mathdro.id/api";
 let getCountry;
-let countryInput = document.getElementsByClassName("search-text").country.value;
+let countryInput;
 const searchButton = document.forms;
 
 
@@ -30,10 +30,14 @@ function getCountryData(country) {
 }
 
 
-getCountryData("USA");
+getCountryData("Worldwide");
 
-;
-
+function submitFunction(event){
+  event.preventDefault();
+  countryInput = document.getElementById("country-field").value
+  getCountryData(countryInput)
+  return false;
+}
 
 
 
