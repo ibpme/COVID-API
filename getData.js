@@ -1,19 +1,14 @@
-const url = "https://covid19.mathdro.id/api";
-let getCountry;
-let countryInput;
-const searchButton = document.forms;
-
-
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
 function getCountryData(country) {
+  let countryInput;
     if (country !== 'Worldwide'){
-        getCountry = fetch(url + `/countries/${country}`);
+      getCountry = fetch("https://covid19.mathdro.id/api" + `/countries/${country}`);
     }
     else{
-        getCountry = fetch(url)
+      getCountry = fetch("https://covid19.mathdro.id/api")
     }
     getCountry
     .then((response)=> response.json())
@@ -29,15 +24,17 @@ function getCountryData(country) {
     });
 }
 
-
-getCountryData("Worldwide");
-
-function submitFunction(event){
+function submitFunction(event) {
   event.preventDefault();
-  countryInput = document.getElementById("country-field").value
+  let countryInput = document.getElementById("country-field").value
   getCountryData(countryInput)
   return false;
 }
+
+
+getCountryData("Worldwide");
+
+
 
 
 
