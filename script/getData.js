@@ -3,8 +3,8 @@ function formatNumber(num) {
 }
 
 function getCountryData(country) {
-  let countryInput;
-  if (country !== "Worldwide") {
+  let getCountry;
+  if (country !== null) {
     getCountry = fetch(
       "https://covid19.mathdro.id/api" + `/countries/${country}`
     );
@@ -23,7 +23,7 @@ function getCountryData(country) {
       document.getElementById("recovered-value").innerHTML = formatNumber(
         data.recovered.value
       );
-      document.getElementById("county-name").innerHTML = country;
+      return data;
     })
     .catch((err) => {
       window.alert("Error Occured Unable to Fetch Data");
@@ -31,11 +31,4 @@ function getCountryData(country) {
     });
 }
 
-function submitFunction(event) {
-  event.preventDefault();
-  let countryInput = document.getElementById("country-field").value;
-  getCountryData(countryInput);
-  return false;
-}
-
-getCountryData("Worldwide");
+export default getCountryData;
