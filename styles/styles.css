@@ -70,7 +70,11 @@ section {
 .cases {
   text-align: center;
 }
-
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .charts {
   width: 80%;
   margin: auto;
@@ -93,8 +97,6 @@ section {
     font-size: 0.6rem;
     padding: 0;
     text-align: center;
-  }
-  .searchbutton {
   }
 }
 

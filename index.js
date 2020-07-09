@@ -20,9 +20,9 @@ if (country == null) {
   document.getElementById("country-name").innerHTML = "Worldwide";
 } else {
   document.getElementById("country-name").innerHTML = capitalize(country);
-  let countryInput = country.toLowerCase();
-  getCountryData(countryInput);
-  getTimeSeriesData(countryInput)
+  // let countryInput = ;
+  getCountryData(country.toLowerCase());
+  getTimeSeriesData(country.toLowerCase())
     .then(() => {
       new Chart(ctx1, timeSeriesTemplate.confirmed);
       new Chart(ctx2, timeSeriesTemplate.recovered);
@@ -30,6 +30,6 @@ if (country == null) {
     })
     .catch((err) => {
       console.log(err);
-      window.alert("Cant Display Charts");
+      window.alert("Can't Display Charts");
     });
 }

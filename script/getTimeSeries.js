@@ -14,7 +14,21 @@ let timeSeriesTemplate = {
         },
       ],
     },
-    options: {},
+    options: {
+      title: {
+        display: true,
+        text: "Confirmed Total",
+        fontSize: 24,
+      },
+      layout: {
+        padding: {
+          left: 50,
+          right: 50,
+          top: 50,
+          bottom: 50,
+        },
+      },
+    },
   },
   recovered: {
     type: "bar",
@@ -29,7 +43,21 @@ let timeSeriesTemplate = {
         },
       ],
     },
-    options: {},
+    options: {
+      title: {
+        display: true,
+        text: "Recovered Total",
+        fontSize: 24,
+      },
+      layout: {
+        padding: {
+          left: 50,
+          right: 50,
+          top: 50,
+          bottom: 50,
+        },
+      },
+    },
   },
   deaths: {
     type: "bar",
@@ -44,7 +72,21 @@ let timeSeriesTemplate = {
         },
       ],
     },
-    options: {},
+    options: {
+      title: {
+        display: true,
+        text: "Deaths Total",
+        fontSize: 24,
+      },
+      layout: {
+        padding: {
+          left: 50,
+          right: 50,
+          top: 50,
+          bottom: 50,
+        },
+      },
+    },
   },
 };
 
@@ -80,7 +122,7 @@ function getTimeSeriesData(country) {
         }
       })
       .catch((err) => {
-        window.alert("Error Occured Unable to Fetch Data");
+        window.alert("Error Occured Unable to Fetch Charts Data");
         console.error(err);
         reject();
       });

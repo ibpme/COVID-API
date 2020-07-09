@@ -23,11 +23,7 @@
       </div>
       <div class="search">
         <div>
-          <form
-            onsubmit="return submitFunction(event)"
-            autocomplete="off"
-            class="search-box"
-          >
+          <form autocomplete="off" class="search-box">
             <input
               name="country"
               class="search-text"
@@ -52,7 +48,10 @@
       </div>
     </section>
     <div class="charts">
-      <div class="container">
+      <div
+        class="chart-container"
+        style="position: relative; height: 40vh; width: 80vw;"
+      >
         <canvas id="chart1"> </canvas>
         <canvas id="chart2"> </canvas>
         <canvas id="chart3"> </canvas>
