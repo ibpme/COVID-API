@@ -112,4 +112,7 @@ section {
     padding: 0;
     margin: 0;
   }
+  .charts {
+    display: none;
+  }
 }
